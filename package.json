@@ -1,6 +1,6 @@
 {
   "name": "expo-pax-poslink",
-  "version": "0.1.0",
+  "version": "0.0.1a",
   "description": "Expo Wrapper for Android Pax POSLink",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -22,9 +22,6 @@
     "ExpoPaxPoslink"
   ],
   "repository": "https://ignore.com",
-  "bugs": {
-    "url": "https://ignore.com/issues"
-  },
   "author": "Levert James <ljames@ospark.com> (ljamesjr85)",
   "license": "MIT",
   "homepage": "https://ignore.com#readme",

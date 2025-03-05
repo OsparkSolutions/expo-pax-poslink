@@ -31,6 +31,10 @@ if (useManagedAndroidSdkVersions) {
   }
 }
 
+dependencies {
+  implementation fileTree (include: [ '*.aar'], dir: 'libs')
+}
+
 android {
   namespace "expo.modules.paxposlink"
   defaultConfig {

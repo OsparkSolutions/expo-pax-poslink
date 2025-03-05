@@ -4,6 +4,13 @@
     "modules": ["ExpoPaxPoslinkModule"]
   },
   "android": {
-    "modules": ["expo.modules.paxposlink.ExpoPaxPoslinkModule"]
+    "modules": [
+      "expo.modules.paxposlink.ExpoPaxPoslinkModule",
+      "expo.modules.paxposlink.CommSettingModule",
+      "expo.modules.paxposlink.ManageRequestModule",
+      "expo.modules.paxposlink.ManageResponseModule",
+      "expo.modules.paxposlink.PosLinkModule",
+      "expo.modules.paxposlink.ProcessTransResultModule"
+    ]
   }
 }

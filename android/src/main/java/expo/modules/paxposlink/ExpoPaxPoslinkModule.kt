@@ -3,7 +3,13 @@ package expo.modules.paxposlink
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 
+import com.pax.poslink.*;
+
 class ExpoPaxPoslinkModule : Module() {
+
+  private val context get() = requireNotNull(appContext.reactContext)
+  private val ap get() = requireNotNull(appContext)
+
   // Each module class must implement the definition function. The definition consists of components
   // that describes the module's functionality and behavior.
   // See https://docs.expo.dev/modules/module-api for more details about available components.
@@ -13,6 +19,14 @@ class ExpoPaxPoslinkModule : Module() {
     // The module will be accessible from `requireNativeModule('ExpoPaxPoslink')` in JavaScript.
     Name("ExpoPaxPoslink")
 
+    //This is for the POSLink Lib initialization. Please use it when your application start.
+    Function("init"){
+      POSLinkAndroid.init(context) 
+    }
+
+
+
+
     // Sets constant properties on the module. Can take a dictionary or a closure that returns a dictionary.
     Constants(
       "PI" to Math.PI
@@ -21,9 +35,14 @@ class ExpoPaxPoslinkModule : Module() {
     // Defines event names that the module can send to JavaScript.
     Events("onChange")
 
+
+
     // Defines a JavaScript synchronous function that runs the native code on the JavaScript thread.
     Function("hello") {
-      "Hello world! 👋"
+      val cs = CommSetting();
+      cs.setTimeOut("3000");
+      cs.setType("AIDL")
+      return@Function "Hello world! 👋"
     }
 
     // Defines a JavaScript function that always returns a Promise and whose native code
