@@ -21,10 +21,9 @@
     "expo-pax-poslink",
     "ExpoPaxPoslink"
   ],
-  "repository": "https://ignore.com",
+  "repository": "https://github.com/OsparkSolutions/expo-pax-poslink",
   "author": "Levert James <ljames@ospark.com> (ljamesjr85)",
   "license": "MIT",
-  "homepage": "https://ignore.com#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.0.25",
